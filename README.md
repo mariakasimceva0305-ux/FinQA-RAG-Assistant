@@ -54,19 +54,21 @@
 ## Структура проекта
 ```
 financial-qa-rag/
-├── data/
-│   ├── raw/
-│   └── processed/
-├── src/
-│   ├── config.py
-│   ├── preprocessor.py
-│   ├── embeddings.py
-│   ├── retriever.py
-│   ├── generator.py
-│   └── cli.py
-├── main.py
-├── requirements.txt
-└── README.md
+├── main.py # Основной запускаемый файл
+├── baseline.py # Базовое решение от организаторов хакатона
+├── .env.example # Шаблон для настройки API ключей
+├── libraries.txt # Список используемых библиотек
+├── questions.csv # 500 тестовых вопросов от клиентов банка
+├── requirements.txt # Зависимости Python для воспроизведения проекта
+├── train_data.csv # 1000+ финансовых статей (база знаний)
+├── src/ # Исходный код RAG-системы
+│ ├── config.py # Конфигурация системы и параметры
+│ ├── data_loader.py # Загрузка и предобработка данных
+│ ├── embedding_service.py # Работа с векторными эмбеддингами
+│ ├── retriever.py # Поиск релевантных чанков и реранкинг
+│ ├── generator.py # Генерация ответов через LLM
+│ └── pipeline.py # Основной пайплайн обработки
+└── README.md # Документация проекта
 ```
 
 ## Быстрый старт
